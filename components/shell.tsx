@@ -37,7 +37,7 @@ export function Shell({ children, index }: { children: React.ReactNode; index?: 
     <div className={present ? 'site presentation' : 'site'}>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <header className="site-header">
-        <Link href={'/' + suffix} className="brand" aria-label="La Nueva Industria, inicio"><span className="brand-wordmark">La Nueva <strong>Industria</strong></span></Link>
+        <Link href={'/' + suffix} className="brand" aria-label="La Nueva Industria, inicio"><span className="brand-symbol" aria-hidden="true"><i/><i/><i/></span><span className="brand-wordmark">La Nueva<br/><strong>Industria</strong></span></Link>
         <nav aria-label="Navegación principal">
           <Link className="index-link" href={'/lecciones/' + suffix}>Índice</Link>
           {index !== undefined && <>
@@ -48,7 +48,7 @@ export function Shell({ children, index }: { children: React.ReactNode; index?: 
         </nav>
       </header>
       <main id="contenido">{children}</main>
-      <footer className="site-footer secondary"><span>La Nueva Industria</span><span>Fundamentos y sistemas de IA</span></footer>
+      <footer className="site-footer secondary"><span className="footer-brand">La Nueva Industria<span className="footer-dot" aria-hidden="true">.</span></span><span>Fundamentos y sistemas de IA</span></footer>
     </div>
   );
 }
@@ -65,4 +65,9 @@ export function LessonFooter({ index }: { index: number }) {
       <div className="lesson-footer-links">{previous && <Link className="text-link" href={'/lecciones/' + previous.slug + '/' + suffix}>← Lección anterior</Link>}<Link className="text-link" href={'/lecciones/' + suffix}>Volver al índice</Link></div>
     </nav>
   );
+}
+
+export function LessonProgress({ index }: { index: number }) {
+  const present = usePresentation();
+  return <nav className="lesson-progress" aria-label="Posición en el módulo">{lessons.map((lesson, i) => <Link key={lesson.slug} href={'/lecciones/' + lesson.slug + '/' + (present ? '?present=true' : '')} aria-label={'Lección ' + (i + 1) + ': ' + lesson.short} aria-current={i === index ? 'page' : undefined} title={lesson.short}><span>{i + 1}</span></Link>)}</nav>;
 }

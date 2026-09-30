@@ -118,9 +118,9 @@ Para añadir APIs reales en una versión futura, retira `output: 'export'` si ne
 
 ## Dirección visual: aprender y enseñar
 
-Fondo gris claro, texto oscuro y columna central de 800 px. Archivo e IBM Plex Mono siguen alojadas localmente. Los títulos preceden a las explicaciones; los conceptos se leen en una columna. Las líneas y el verde discreto distinguen enlaces, controles y estados. Los paneles se reservan para ejercicios, código y diagramas.
+Fondo gris claro, texto oscuro y columna central de 800 px. Archivo e IBM Plex Mono siguen alojadas localmente. Los títulos preceden a las explicaciones; los conceptos se leen en una columna. La identidad combina grafito, naranja quemado y verdes suaves para diagramas y estados. Una marca geométrica y cinco símbolos propios identifican el módulo y sus temas. Los títulos editoriales combinan Archivo con Georgia, una fuente de sistema. Los paneles se reservan para ejercicios, código y diagramas.
 
-La portada muestra el objetivo del módulo, un botón para empezar y las cinco lecciones. Se eliminan eslóganes, numeración decorativa y etiquetas de sección repetidas. La cabecera de cada lección incluye su posición, título, descripción y acceso directo al ejercicio.
+La portada muestra el objetivo del módulo, un botón para empezar, un esquema de las piezas del sistema y las cinco lecciones. Se eliminan eslóganes, numeración decorativa y etiquetas de sección repetidas. La cabecera de cada lección incluye su posición, título, descripción, acceso directo al ejercicio y un recorrido de cinco enlaces con la lección actual marcada. Los laboratorios se distinguen por su cabecera oscura; los diagramas usan una secuencia conectada, y los ejemplos de código tienen contraste propio.
 
 El modo presentación conserva `?present=true` al navegar, reduce los controles superiores y mantiene la lectura vertical. En móvil, índice y controles usan una segunda fila para conservar sus etiquetas; los diagramas y ejercicios se adaptan sin reducir el tamaño de los campos.
 
