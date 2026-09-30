@@ -1,0 +1,7 @@
+export const lessons = [
+ {slug:'01-fundamentos-ia',title:'Cómo funciona realmente la IA moderna',short:'Fundamentos de IA',description:'Del texto al siguiente token. Qué hace un modelo, qué no hace y por qué puede equivocarse.',tag:'MODELOS · TOKENS · CONTEXTO',duration:'18 min',concept:'Un modelo no sabe. Predice.'},
+ {slug:'02-rag',title:'Embeddings, búsqueda semántica y RAG',short:'Conocimiento y RAG',description:'Conecta las respuestas con tus documentos. Recupera primero; genera después.',tag:'EMBEDDINGS · RETRIEVAL · RAG',duration:'22 min',concept:'Antes de responder, encontrar.'},
+ {slug:'03-sistemas-fiables',title:'Cómo hacer que un sistema de IA funcione de verdad',short:'Sistemas fiables',description:'Una respuesta buena no demuestra fiabilidad. Configura, mide y controla los resultados.',tag:'EVALUACIÓN · SCHEMAS · TESTING',duration:'20 min',concept:'Funcionar una vez no es suficiente.'},
+ {slug:'04-tools-mcp',title:'Dar herramientas a una IA',short:'Herramientas y MCP',description:'Pasa de generar texto a consultar sistemas y ejecutar acciones con límites claros.',tag:'TOOLS · APIs · MCP',duration:'18 min',concept:'Responder es solo el principio.'},
+ {slug:'05-agentes-arquitectura',title:'Agentes y arquitectura de sistemas de IA',short:'Agentes y arquitectura',description:'Une modelo, conocimiento y herramientas en un proceso que puedas observar y controlar.',tag:'AGENTES · ESTADO · WORKFLOWS',duration:'22 min',concept:'La inteligencia está en el sistema.'},
+] as const;
