@@ -1,4 +1,4 @@
-# La Nueva Industria — IA aplicada
+# La Nueva Industria — Fundamentos y sistemas de IA
 
 Web educativa completa en español: cinco lecciones independientes, cinco laboratorios locales, diagramas HTML/CSS, navegación secuencial y modo presentación.
 
@@ -59,7 +59,7 @@ Las rutas incluyen slash final; Next redirige las variantes sin slash durante de
 
 ## Grabar una lección
 
-Abre cualquier lección y añade `?present=true`, o pulsa «Modo presentación». Se reducen navegación y elementos secundarios y se amplía el contenido. El modo se conserva en los enlaces al índice, inicio, lección siguiente y footer. «Salir de presentación» lo desactiva. El recorrido sigue siendo vertical; no se convierte en diapositivas.
+Abre cualquier lección y añade `?present=true`, o pulsa «Modo presentación». Se reducen los controles de cabecera y elementos secundarios y se aumenta el tamaño de lectura sin ensanchar la columna de 800 px. Índice, anterior y siguiente siguen disponibles al pie de cada lección. El modo se conserva en los enlaces al índice, inicio, lección siguiente y footer. «Salir de presentación» lo desactiva. El recorrido sigue siendo vertical; no se convierte en diapositivas.
 
 Las duraciones indicadas son estimaciones para recorrer cada lección con explicación y laboratorio, no la duración de vídeos publicados. No se incluyen archivos de vídeo.
 
@@ -81,8 +81,7 @@ app/
   lecciones/page.tsx             Índice /lecciones
   lecciones/[slug]/page.tsx       Rutas estáticas de las lecciones
   layout.tsx                     Idioma, metadatos y favicon
-  globals.css                    Componentes e interacciones
-  aerospace.css                  Dirección visual aeroespacial y responsive
+  globals.css                    Lectura, componentes, demos y responsive
 components/
   shell.tsx                      Header, presentación, enlaces y footer
   ui.tsx                         Bloques, diagramas, código y laboratorio
@@ -117,8 +116,12 @@ Edita `lib/lessons.ts` para metadatos y `components/lesson-content.tsx` para tex
 
 Para añadir APIs reales en una versión futura, retira `output: 'export'` si necesitas endpoints de servidor, guarda las claves en el servidor y añade autorización, validación y evaluación antes de activar acciones externas.
 
-## Dirección visual 02
+## Dirección visual: aprender y enseñar
 
-Composición inspirada en documentación aeroespacial: titulares extendidos, retícula asimétrica, grandes índices de capítulo, papel frío y diagramas en gris acero. Identidad propia sin logotipos ni imágenes de SpaceX. Se mantienen las cinco lecciones y demos.
+Fondo gris claro, texto oscuro y columna central de 800 px. Archivo e IBM Plex Mono siguen alojadas localmente. Los títulos preceden a las explicaciones; los conceptos se leen en una columna. Las líneas y el verde discreto distinguen enlaces, controles y estados. Los paneles se reservan para ejercicios, código y diagramas.
+
+La portada muestra el objetivo del módulo, un botón para empezar y las cinco lecciones. Se eliminan eslóganes, numeración decorativa y etiquetas de sección repetidas. La cabecera de cada lección incluye su posición, título, descripción y acceso directo al ejercicio.
+
+El modo presentación conserva `?present=true` al navegar, reduce los controles superiores y mantiene la lectura vertical. En móvil, índice y controles usan una segunda fila para conservar sus etiquetas; los diagramas y ejercicios se adaptan sin reducir el tamaño de los campos.
 
 Fuentes originales: https://github.com/google/fonts/tree/main/ofl/archivo y https://github.com/google/fonts/tree/main/ofl/ibmplexmono. Se incluyen sus licencias.
