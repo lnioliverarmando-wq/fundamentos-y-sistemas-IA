@@ -45,3 +45,12 @@ Pruebas funcionales e inspección visual realizadas en Chromium. No se afirma ce
 - Consulta de devoluciones ejecutada en el laboratorio RAG móvil: recuperación, contexto y respuesta con citas correctos.
 - Estilos compartidos aplicados a las cinco lecciones; la lógica de las simulaciones no se ha modificado.
 - Captura de portada actualizada.
+
+## Producción en Vercel · 30 de septiembre de 2026
+
+- Proyecto: `lni/la-nueva-industria`. URL: https://la-nueva-industria.vercel.app/.
+- Inicio, índice y cinco lecciones: HTTP 200. Ruta inexistente: HTTP 404 y página propia.
+- Archivo, IBM Plex Mono y favicon servidos correctamente. Navegación y modo presentación comprobados.
+- Demos ejecutadas en producción: fundamentos, RAG, fiabilidad, herramientas y agentes.
+- Portada y lección 01 revisadas en escritorio de 1440 px y móvil de 390 px. Sin desbordamiento horizontal ni errores de página.
+- Capturas en `docs/captura-produccion-*.png`.

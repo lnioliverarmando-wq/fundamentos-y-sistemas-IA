@@ -2,6 +2,9 @@
 
 Web educativa completa en español: cinco lecciones independientes, cinco laboratorios locales, diagramas HTML/CSS, navegación secuencial y modo presentación.
 
+- **Web de producción:** https://la-nueva-industria.vercel.app/
+- **Repositorio:** https://github.com/lnioliverarmando-wq/fundamentos-y-sistemas-IA
+
 ## Ejecutar
 
 Requisitos: Node.js 22 o superior y npm.
@@ -27,7 +30,7 @@ El ZIP incluye una exportación ya compilada: después de extraerlo, también pu
 
 ## Vercel
 
-En Vercel, usa raíz `.`, preset Next.js y `npm run build`. `next.config.ts` exporta las páginas estáticas. El directorio `out/` se genera durante la compilación. No necesita variables de entorno ni base de datos.
+El proyecto `la-nueva-industria` está en el espacio `lni` de Vercel. Usa raíz `.`, preset Next.js y `npm run build`. `next.config.ts` exporta las páginas estáticas. El directorio `out/` se genera durante la compilación. No necesita variables de entorno ni base de datos.
 
 Para publicar desde esta carpeta con la CLI autenticada:
 
@@ -38,6 +41,8 @@ npm run build
 vercel link --yes --project la-nueva-industria
 vercel deploy --prod --yes
 ```
+
+El repositorio GitHub principal es `lnioliverarmando-wq/fundamentos-y-sistemas-IA`, rama `main`.
 
 ## Rutas
 
