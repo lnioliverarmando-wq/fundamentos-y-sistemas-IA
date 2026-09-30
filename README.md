@@ -43,6 +43,7 @@ vercel deploy --prod --yes
 ```
 
 El repositorio GitHub principal es `lnioliverarmando-wq/fundamentos-y-sistemas-IA`, rama `main`.
+Está conectado al proyecto `lni/la-nueva-industria` en Vercel; los cambios publicados en `main` generan un despliegue de producción.
 
 ## Rutas
 
