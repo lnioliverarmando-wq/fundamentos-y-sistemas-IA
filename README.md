@@ -65,7 +65,7 @@ Las duraciones indicadas son estimaciones para recorrer cada lección con explic
 
 ## Contenido y demos
 
-1. **Fundamentos / M2 vídeo 1:** división de texto ilustrativa y generación manual de tres piezas en tres contextos. Probabilidades inventadas; no es un tokenizer ni un modelo real. Incluye comparación de peticiones con respuestas preparadas y práctica final de devolución, con guía revelable. Recorrido de 12–15 minutos y notas por sección ocultas en presentación. Guion y revisión: `docs/M2-video-01.md`.
+1. **Fundamentos / M2 vídeo 1:** división de texto ilustrativa y generación manual de tres piezas en tres contextos. Probabilidades inventadas; no es un tokenizer ni un modelo real. Incluye comparación de peticiones con respuestas preparadas y práctica final de devolución, con guía revelable. Recorrido de 12–15 minutos con explicaciones que se pueden leer en voz alta, ejemplos visibles, transiciones y explicaciones de cada paso de la demo. Notas de ritmo por sección ocultas en presentación. Guion y revisión: `docs/M2-video-01.md`.
 2. **RAG:** cuatro temas de una tienda ficticia, búsqueda por palabras clave, fragmentos recuperados, respuesta con referencias y abstención para preguntas desconocidas. No hay embeddings ni generación real.
 3. **Fiabilidad:** presets A/B, chunk size, top-k y reranking. La métrica es ilustrativa y determinista, no un benchmark.
 4. **Tools:** consulta de cliente, dos facturas pendientes y creación de tarea confirmada. Incluye fallo de consulta y bloqueo de escritura. «Mañana» se resuelve con la fecha y zona horaria del navegador.

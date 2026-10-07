@@ -47,3 +47,11 @@ No se conecta un modelo real. La división del texto, las probabilidades y las r
 - [Peticiones claras, contexto y ejemplos · Anthropic](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices).
 
 Estas referencias apoyan las explicaciones conceptuales. Las cifras y los borradores de las demos son propios y no son mediciones tomadas de las fuentes.
+
+## Lectura guiada · revisión del 7 de octubre de 2026
+
+La explicación que antes requería desarrollar oralmente las notas pasa al contenido visible de la lección. Incluye apertura, analogías del motor/coche y de estudiar/utilizar lo aprendido, diálogo de Ana, mesa de trabajo del contexto, dos respuestas al horario y transiciones entre secciones. El contenido se puede leer durante la grabación y repasar después desde el mismo enlace.
+
+Las notas del presentador siguen ocultas en presentación y solo orientan el ritmo. Los términos se explican antes de usarlos. No se incluyen afirmaciones sobre haber creado el modelo o sus tecnologías: las demos se identifican como simulaciones pedagógicas.
+
+El laboratorio de generación explica cada estado: contexto inicial, cambio a tormenta o bebidas, pieza incorporada, cálculo siguiente y final del ejemplo. La comparación de peticiones explica por qué el primer borrador es genérico y por qué el segundo reconoce la fecha que falta. El ejercicio permite leer directamente la guía sin tener que escribir o memorizar una solución.

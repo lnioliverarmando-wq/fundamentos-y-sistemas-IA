@@ -3050,3 +3050,28 @@ body {
   .prompt-choice { flex: 1; }
 }
 @media print { .presenter-notes { display: none; } }
+
+/* Lectura guiada: explicaciones útiles en pantalla y al compartir la lección. */
+.lesson-opening { padding: 28px 0 8px; }
+.lesson-opening p { color: #444e3d; }
+.lesson-example { margin: 24px 0; padding: 20px 24px; background: var(--tint); border-left: 2px solid #a8b99a; }
+.lesson-example figcaption { margin-bottom: 14px; font: 11px/1.6 var(--font-mono); color: var(--green); }
+.lesson-example p { color: #444e3d; }
+.block-content>.lesson-bridge { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--accent); }
+.context-desk { padding: 0; margin: 24px 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.context-desk li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.context-desk strong,.context-desk span { display: block; }
+.context-desk span { margin-top: 6px; color: var(--muted); }
+.demo .demo-explanation { font-size: 17px; line-height: 1.75; color: #444e3d; margin: 18px 0; }
+.demo .step-explanation { padding: 16px 20px; border-left: 2px solid var(--accent); background: var(--tint); }
+.demo .response-explanation { border-top: 1px solid #c4d0b5; padding-top: 16px; }
+.presentation .demo .demo-explanation { font-size: 18px; }
+.lesson-closing { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+@media (min-width: 900px) {
+  .generation-workbench .prediction-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+@media (max-width: 600px) {
+  .lesson-example { padding: 16px; }
+  .context-desk { grid-template-columns: 1fr; }
+  .demo .step-explanation { padding: 14px; }
+}

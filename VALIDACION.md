@@ -67,3 +67,11 @@ Pruebas funcionales e inspección visual realizadas en Chromium. No se afirma ce
 - Inicio, índice y cinco lecciones: HTTP 200; ruta inexistente: HTTP 404.
 - Capturas: `docs/m2-*-presentacion.png`. Revisión de contenido y guion: `docs/M2-video-01.md`.
 - El navegador integrado no pudo iniciar por un error de metadatos del entorno. La comprobación se realizó con Playwright y Chrome local en modo headless.
+
+## Lectura guiada para grabación · 7 de octubre de 2026
+
+- Explicaciones principales, ejemplos y transiciones disponibles en pantalla tanto al presentar como al compartir la lección. Notas privadas de ritmo ocultas en presentación.
+- Cada estado de la generación tiene una explicación coherente con el contexto y las piezas añadidas; comprobados cielo, tormenta, bebidas y final.
+- Comparación y ejercicio explican el motivo de la mejora y los datos que siguen faltando.
+- Comprobación funcional completa sobre la exportación local: controles, reinicios, presentación, navegación, rutas y tamaños 390/768/1440 px correctos; sin errores de página.
+- Capturas de presentación actualizadas. Compilación y TypeScript correctos.

@@ -34,14 +34,26 @@ export function FundamentalsDemo() {
   const tokens = tokenize(input);
   const scenario = scenarios[prompt];
   const done = step === scenario.pieces.length;
+  const explanation = done
+    ? `Ya tenemos «${scenario.prefix}${scenario.pieces.join('')}». Hemos construido la continuación añadiendo una pieza cada vez. Esta simulación termina aquí; un modelo real puede elegir otras piezas y terminar de otra forma.`
+    : step === 0
+      ? prompt === 'nublado'
+        ? 'Ahora hemos añadido nubes de tormenta. En esta simulación, «gris» pasa a ser la continuación con más probabilidad. Cambiar la información disponible cambia las opciones. Pulsa el botón para añadir la primera pieza.'
+        : prompt === 'sed'
+          ? 'La frase habla de beber. Por eso, las opciones ahora son bebidas. En esta simulación, «agua» tiene más probabilidad. El contexto orienta qué puede venir después; pulsa el botón para ver el siguiente paso.'
+          : 'La frase todavía está incompleta. Aquí «azul» tiene un 73 % de probabilidad como continuación. Eso no significa que hayamos comprobado el color del cielo: las cifras son inventadas. Pulsa el botón para añadir esa pieza.'
+      : `Ya hemos añadido «${scenario.pieces.slice(0, step).join('').trim()}». Esa información también forma parte de la secuencia. Ahora calculamos lo que puede venir después: en este ejemplo, «${scenario.pieces[step].trim()}» tiene más probabilidad. Al pulsar, la añadimos y repetimos el proceso.`;
   function reset() { setInput(defaults); setPrompt('cielo'); setStep(0); }
   return <DemoFrame title="Del texto a las probabilidades" kicker="Divide una frase en piezas ilustrativas. Después, construye una continuación a tu ritmo.">
+    <p className="demo-explanation">Mira las piezas de esta frase. Algunas palabras aparecen enteras y otras se dividen. Puedes dejar el ejemplo cargado o escribir otra frase para comparar.</p>
     <label className="field-label" htmlFor="token-input">Tu texto</label>
     <textarea id="token-input" value={input} maxLength={240} onChange={e => setInput(e.target.value)} rows={2}/>
     <div className="token-meta"><Label>Piezas ilustrativas</Label><span>{tokens.length} piezas · {input.length}/240 caracteres</span></div>
     <div className="tokens" aria-live="polite">{tokens.length ? tokens.map((x, i) => <span key={i}>{x}<small>{String(i + 1).padStart(2, '0')}</small></span>) : <p>Escribe una frase para ver cómo se divide.</p>}</div>
     <p className="fine-print">División pedagógica, no un tokenizer real. Omite espacios y corta palabras largas con una regla simple. Los tokens reales dependen del modelo y pueden incluir espacios, signos o partes de palabras.</p>
     <div className="demo-divider"/>
+    <div className="generation-workbench">
+    <p className="demo-explanation">Ahora vamos a completar una frase. Elige el contexto y observa las opciones antes de avanzar. Si cambias de la frase sobre el cielo a la frase sobre una tormenta, cambia la información con la que estamos trabajando.</p>
     <label className="field-label" htmlFor="prompt-context">Contexto disponible</label>
     <select id="prompt-context" value={prompt} onChange={e => { setPrompt(e.target.value); setStep(0); }}>
       {Object.entries(scenarios).map(([key, item]) => <option value={key} key={key}>{item.label}</option>)}
@@ -51,7 +63,9 @@ export function FundamentalsDemo() {
       <div><Label>{done ? 'Fin del ejemplo' : `Siguiente pieza · paso ${step + 1}`}</Label><h4>{done ? 'La continuación está completa.' : 'El contexto cambia las probabilidades.'}</h4><p>{done ? 'Estas tres piezas son una continuación preparada. Un modelo real puede producir otras y detenerse de otra forma.' : 'Añadir una pieza cambia la secuencia disponible. El siguiente paso usa también lo que ya se ha generado.'}</p></div>
       <div className="probabilities" aria-live="polite" aria-atomic="true">{!done && scenario.probabilities[step].map(([word, probability]) => <div className="prob-row" key={word}><div><span>{word}</span><span>{probability}%</span></div><div className="prob-track"><span style={{ width: `${probability}%` }}/></div></div>)}{done && <p className="generation-complete">{scenario.pieces.join('')} <span aria-hidden="true">✓</span></p>}</div>
     </div>
+    <p className="demo-explanation step-explanation" aria-live="polite" aria-atomic="true">{explanation}</p>
     <div className="recording-controls"><button className="primary-button" disabled={done} onClick={() => setStep(s => Math.min(s + 1, 3))}>Añadir siguiente pieza →</button><button className="text-button" onClick={() => setStep(0)}>Reiniciar secuencia ↺</button></div>
+    </div>
     <p className="fine-print">Simulación: piezas y probabilidades inventadas, sin conexión a un modelo. Aquí siempre elegimos la opción más probable y terminamos tras tres pasos; en un LLM real la selección y la parada pueden variar.</p>
     <button className="text-button" onClick={reset}>Restablecer laboratorio ↺</button>
   </DemoFrame>;
