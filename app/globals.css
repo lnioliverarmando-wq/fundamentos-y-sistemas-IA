@@ -2996,3 +2996,57 @@ body {
     transition: none;
   }
 }
+
+/* Primer vídeo de M2: controles manuales y notas fuera de la grabación. */
+.presenter-notes,.optional-detail {
+  margin-top: 24px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+}
+.presenter-notes summary,.optional-detail summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+.presenter-notes>div,.optional-detail>p { margin-top: 14px; }
+.presenter-notes a { text-decoration: underline; text-underline-offset: 3px; }
+.presentation .presenter-notes { display: none; }
+.generation-sequence {
+  margin: 24px 0;
+  padding: 20px;
+  border-left: 2px solid var(--accent);
+  background: #e9ece4;
+  overflow-wrap: anywhere;
+}
+.generation-sequence p { margin-top: 10px; font-size: 22px; line-height: 1.5; }
+.generation-sequence strong,.generation-cursor { color: var(--accent); }
+.generation-complete { font-size: 24px; color: var(--accent); }
+.recording-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 22px 0; }
+.recording-controls button { min-height: 44px; }
+.recording-controls .primary-button { padding: 10px 18px; }
+.prompt-choice { padding: 10px 16px; border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 2px; }
+.prompt-choice[aria-pressed=true] { background: #30382b; color: #f0f3e9; border-color: #30382b; }
+.prompt-example { margin-bottom: 20px; }
+.prompt-ingredients { margin: 0; }
+.prompt-ingredients>div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.prompt-ingredients dt { font-size: 13px; font-weight: 600; color: var(--accent); }
+.prompt-ingredients dd { margin: 5px 0 0; }
+.prepared-response { margin: 20px 0; padding: 20px; border-left: 2px solid #a8b99a; background: #e9ece4; }
+.prepared-response>.label { margin-bottom: 12px; }
+.key-takeaways { padding-left: 24px; margin: 0; }
+.key-takeaways li { padding-left: 8px; margin: 16px 0; }
+.prompt-exercise { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); }
+.prompt-exercise h3 { font-size: 23px; margin-bottom: 20px; }
+.exercise-request { font: 400 24px/1.5 var(--font-editorial); color: var(--accent); }
+.prompt-exercise .field-label { display: block; margin: 20px 0 8px; }
+.prompt-exercise textarea { width: 100%; padding: 14px; border: 1px solid #bcc7af; border-radius: 2px; background: #fafbf7; resize: vertical; color: var(--ink); }
+@media (max-width: 600px) {
+  .generation-sequence { padding: 14px; }
+  .generation-sequence p { font-size: 19px; }
+  .prepared-response { padding: 16px; }
+  .prompt-switch { gap: 10px; }
+  .prompt-choice { flex: 1; }
+}
+@media print { .presenter-notes { display: none; } }

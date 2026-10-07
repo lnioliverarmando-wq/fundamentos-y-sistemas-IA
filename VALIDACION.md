@@ -54,3 +54,16 @@ Pruebas funcionales e inspección visual realizadas en Chromium. No se afirma ce
 - Demos ejecutadas en producción: fundamentos, RAG, fiabilidad, herramientas y agentes.
 - Portada y lección 01 revisadas en escritorio de 1440 px y móvil de 390 px. Sin desbordamiento horizontal ni errores de página.
 - Capturas en `docs/captura-produccion-*.png`.
+
+## M2 · Vídeo 1 · 7 de octubre de 2026
+
+- `npm ci`, `npm run typecheck` y `npm run build`: correctos. Exportación estática generada.
+- Chromium/Chrome sobre la exportación local: edición de texto, entrada vacía y signos; tres contextos y nueve avances; distribuciones intermedias suman 100; final desactiva el botón; reinicios de secuencia y laboratorio correctos.
+- Comparación de peticiones: alternancia, respuestas preparadas, ocultación al cambiar y reinicio correctos.
+- Ejercicio final: escritura, guía revelable y reinicio de ambos campos correctos.
+- Notas desplegadas antes de presentar: ocultas al activar presentación. Acceso directo con `?present=true` correcto. Navegación a RAG y vuelta conserva el modo; salir devuelve las notas.
+- Demos y guía utilizables también en presentación. IDs únicos y sin errores de página.
+- Comprobadas anchuras 390, 768 y 1440 px: sin desbordamiento del documento. Portada y demos inspeccionadas visualmente.
+- Inicio, índice y cinco lecciones: HTTP 200; ruta inexistente: HTTP 404.
+- Capturas: `docs/m2-*-presentacion.png`. Revisión de contenido y guion: `docs/M2-video-01.md`.
+- El navegador integrado no pudo iniciar por un error de metadatos del entorno. La comprobación se realizó con Playwright y Chrome local en modo headless.

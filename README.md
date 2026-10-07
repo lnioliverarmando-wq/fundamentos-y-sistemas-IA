@@ -65,7 +65,7 @@ Las duraciones indicadas son estimaciones para recorrer cada lección con explic
 
 ## Contenido y demos
 
-1. **Fundamentos:** división de texto ilustrativa y distribución de probabilidades según tres contextos. No es un tokenizer real.
+1. **Fundamentos / M2 vídeo 1:** división de texto ilustrativa y generación manual de tres piezas en tres contextos. Probabilidades inventadas; no es un tokenizer ni un modelo real. Incluye comparación de peticiones con respuestas preparadas y práctica final de devolución, con guía revelable. Recorrido de 12–15 minutos y notas por sección ocultas en presentación. Guion y revisión: `docs/M2-video-01.md`.
 2. **RAG:** cuatro temas de una tienda ficticia, búsqueda por palabras clave, fragmentos recuperados, respuesta con referencias y abstención para preguntas desconocidas. No hay embeddings ni generación real.
 3. **Fiabilidad:** presets A/B, chunk size, top-k y reranking. La métrica es ilustrativa y determinista, no un benchmark.
 4. **Tools:** consulta de cliente, dos facturas pendientes y creación de tarea confirmada. Incluye fallo de consulta y bloqueo de escritura. «Mañana» se resuelve con la fecha y zona horaria del navegador.
@@ -86,7 +86,9 @@ components/
   shell.tsx                      Header, presentación, enlaces y footer
   ui.tsx                         Bloques, diagramas, código y laboratorio
   lesson-content.tsx             Contenido editorial de las cinco lecciones
-  fundamentals-demo.tsx          Tokenización y probabilidades
+  foundations-lesson.tsx         M2 vídeo 1, contenido y notas del presentador
+  fundamentals-demo.tsx          Tokenización y generación manual
+  prompt-demo.tsx                Comparación de peticiones y práctica final
   rag-demo.tsx                   Recuperación y respuesta
   reliability-demo.tsx           Parámetros y contexto
   execution-demo.tsx             Tools y workflow
@@ -112,7 +114,7 @@ public/favicon.svg               Identidad visual
 
 ## Personalización
 
-Edita `lib/lessons.ts` para metadatos y `components/lesson-content.tsx` para textos. Los colores están en `:root` dentro de `app/globals.css`. El corpus simulado se cambia en `lib/retrieval.ts`.
+Edita `lib/lessons.ts` para metadatos, `components/foundations-lesson.tsx` para la primera lección y `components/lesson-content.tsx` para las demás. Los colores están en `:root` dentro de `app/globals.css`. El corpus simulado se cambia en `lib/retrieval.ts`.
 
 Para añadir APIs reales en una versión futura, retira `output: 'export'` si necesitas endpoints de servidor, guarda las claves en el servidor y añade autorización, validación y evaluación antes de activar acciones externas.
 
